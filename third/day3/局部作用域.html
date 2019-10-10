@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+          function  fn(){}
+          fn();
+            函数调用的时候，开辟了一个栈内存
+              1.形参赋值
+              2.变量提升
+              3.执行上下文
+              4.执行栈销毁（变量和参数）    
+
+        局部作用域运行：
+          1.没有形参的时候，但是有var，如果在var的上方访问这个变量，结果是undefined
+          2.有形参实参也有var，如果在var的上方访问这个变量，结果应该是实参
+          3.函数内有函数，有实参（数字，变量，函数）形参，那么结果就为函数内有函数
+        */
+
+        //     +function(){
+        //         b=4;
+        //         var c=d=6;//c=window.d=6
+        //     }()
+        //     console.log(d);
+        //     console.log(b);
+        //     console.log(c);
+
+        // function Foo() {
+        //     var i = 0;
+        //     return function () {
+        //         document.write(i++);
+        //     }
+        // }
+        // var f1 = Foo();
+        // f2 = Foo();
+        // f1();
+        // f1();
+        // f2();
+        // function fn(a) {
+        //     console.log(a);//undefined
+        //     a = 1;//形参是a  在函数里面  若不是a，就是window.a
+        // }
+        // fn();
+        // console.log(a);//报错
+
+        // function fn(){
+        //     console.log(12);
+        // }
+        // var as=fn()//函数调用
+        // console.log(as);
+
+        // function fn(){
+        //     console.log(12);
+        //     return 45;//中断循环
+        //     console.log(456);
+        // }
+        // fn()
+
+        // var a=12;
+        // function fn(){
+        //     console.log(a);
+        //     return 4
+        //     a=8;//  ->12      var a=8  ->undefined
+        // }
+        // fn()
+
+        // function fn(){
+        //     var b =2*a;//a是undefined
+        //     var a =200;
+        //     var c =a/2;
+        //     alert(b);//NaN
+        //     alert(c);//100
+        // }
+        // fn()
+
+        
+    </script>
+</body>
+
+</html>

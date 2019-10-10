@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+  /*
+     var 变量提升，就会存入全局的活动变量对象中  允许有多个同名的变量不支持块级作用域
+     let 不会变量提升有暂存死区(在变量翟营的上方都访问不到这个变量)  不会存到全局的活动变量对象中，不允许多个同名的变量（唯一的），支持块级作用域
+     块  ==》{}
+    const 常量  跟let一样的属性 值是不能改变的（若是引用类型的方式会改变属性值）
+            声明必须赋值
+
+  */
+//   比较特殊的类型
+//   { 
+//       console.log(a);//在上方访问中的函数中，结果为undefined
+//       if(a){
+//           console.log(1)
+//       }else{
+//           console.log(2)
+//       }
+//       {//这个函数在块中，在预解析的是undefined
+//           function a() {}}
+//   }
+
+
+
+
+// {
+//     const a =0
+// }
+// console.log(a)//报错  支持块级作用链
+
+
+
+// console.log(a);//报错，a只能是一个值
+// let a=10;
+// var a=10;
+// function a(){}
+// let a=12;
+// console.log(a);
+
+
+
+// for(var i=0;i<3;i++){}
+// console.log(i);//3  全局变量
+
+for(let i=0;i<3;i++){}
+console.log(i);//报错  不支持全局变量
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+    解决重命名问题  (封闭空间) 看到匿名函数自执行就称为闭包
+
+    函数天生就有局部作用域，函数内的变量、函数或者参数不被外界污染
+
+    形成一个天然的保护层，不会被全局污染
+    
+    */
+
+        //自带一个函数  同样有命名的问题
+        // function f(){
+        //     function a(){
+        //         console.log(1);
+        //     }
+        //     a();
+        // }
+        // fn();
+        // function f1(){
+        //     function a(){
+        //         console.log(2);
+        //     }
+        //     a();
+        // }
+        // fn1()
+
+
+
+        //自执行函数  更简单些
+        // (function(){
+        //     function a(){
+        //         console.log(1);
+        //     }
+        //     a();
+        // })()
+
+        // (function(){
+        //     function a(){
+        //         console.log(2);
+        //     }
+        //     a();
+        // })()
+
+
+        /*
+        每个引用类型的地址是不一样的，在不一样的地址下挂同名属性
+        访问的时候，虽然属性名一样，但是空间地址不一样，也能解决
+        重命名问题（命名空间）
+        */
+        let obj = {
+            a: function a() {
+                console.log(1);
+            }
+        }
+
+        let obj2 = {
+            a: function a() {
+                console.log(2);
+            }
+        }
+
+        obj.a();
+        obj2.a();
+    </script>
+</body>
+
+</html>
