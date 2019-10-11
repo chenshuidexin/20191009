@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   /*
+       this:  掌握this代表着谁
+       在事件中，事件是谁，this就是谁
+
+       函数直接调用，默认this为window   点击事件为null   普通事件为undefined
+
+
+       方法：前面有主的叫方法，this就是.前面的主
+
+       箭头函数：它的this为函数定义时的上下文定义域(全局 局部)
+
+   
+   */
+// document.onclick=function(){
+//     console.log(this);//#document  事件点击
+// }
+
+
+// document.onclick = fn;//不起作用
+// function fn(){
+//     console.log(this);//window 函数调用  看.前面的
+// }
+// fn();//声明函数
+
+//点击事件函数   
+// document.onclick = fn();//函数声明  window.fn()
+// function fn(){
+//     console.log(this);//window
+// }
+/*
+function fn(){
+    console.log(this);//window 同上
+}
+document.onhaha = fn();
+console.log(document.onhaha);//undefined  普通事件
+*/
+/*
+function fn(){
+    console.log(this);//window 同上
+}
+document.onclick = fn();
+console.log(document.onclick);//null 点击事件
+*/
+/*
+document.onclick = (function (){
+    console.log(this);//window
+    return fn;//变量fn相当于在document里面
+})()
+function fn(){
+    console.log(this);//#document  点击会出现
+}*/
+//箭头函数的应用   在作用域上下里面
+document.onclick = function(){
+    let fn = ()=>{
+        console.log(this);//#document  局部作用域
+    }
+    fn();
+}
+// document.onclick=()=>{
+//     console.log(this);//window  全局作用域
+// }
+
+
+
+   </script> 
+</body>
+</html>

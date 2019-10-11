@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*函数-->复用
+    步骤：初始化  加工  出厂
+    工厂模式的目的是为了批量生产对象
+    */   
+   
+    function person(name,age,job,hobby){
+        // let obj={};
+        // obj.name=name;
+        // obj.age=age;
+        // obj.job=job;
+        // obj.hobby=hobby;
+        // return obj;
+        //另一种形式   上面的形式常用
+        let obj={
+            name,
+            age,
+            job,
+            hobby,
+        }
+        return obj;
+    }
+    let a=person('易烊千玺',20,"歌手",'广泛')
+    console.log(a);
+    </script>
+</body>
+</html>

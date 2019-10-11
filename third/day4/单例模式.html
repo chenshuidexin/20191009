@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+    单例模式：      访问对象{}属性默认全部暴露出来，功能不够强大
+        单独的实例（所具备的特征）
+
+        引用类型   let obj={}
+        由多个简单类型或者引用类型组合在一起的事务
+
+
+
+        高级单例模式：let  obj=(function(){
+            return {
+                属性名：属性值
+            }
+        })();
+        console.log(obj);  ===> 局部暴露，只需出结果
+        让单例模式的功能更加强大，可以隐藏内部代码形成模块化编程
+
+
+
+
+        工厂模式：批量生产对象
+
+   */
+        //单例模式{。。。}   ==>里面的内容包括{}
+
+        // let obj={
+        // name:"易烊千玺",
+        // age:19,
+        // job:"sinnging",
+        // hobby:"广泛",
+        // }
+
+        //高级单例：高级单例模式不再是直接将一个对象赋值给命名空间，而是先执行一个自执行函数，在函数执行结束时返回一个对象
+//         let num = 2;
+//         let obj = (function () {
+//             let age = 6;
+//             function fn(a, b) {
+//                 console.log(age+num);
+//                 return (a + b);
+//             }
+//             return {
+//                 name: "易烊千玺",
+//                 num:fn(age,num),
+//             }
+//         })();
+//         let obj2 = (function(){
+//             let nn=10;
+//             function fn(a,b){
+//                 console.log(a*b);
+//                 return (a*b);
+//             }
+//             return {
+//                 nn:nn,
+//                 nn2:fn(num,nn)
+//             }
+//         })();
+
+// console.log(obj);
+// console.log(obj2);
+
+
+
+var person = (function () {
+  function eat(food) {
+    console.log(`I like eating ${food}`)
+  }
+  function hobby(h) {
+    console.log(`I like playing ${h}`)
+  }
+  var account = '$10000000';
+  var name = '王老五';
+  var age = 40;
+  return {
+    name: name,
+    age: age,
+    eat: eat,
+    hobby: hobby
+  }
+})();
+console.log(person);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //柯里化函数
+        // function fn(x){
+        //     return function(y){
+        //         return (x+y);
+        //     }
+        // }
+        // let a=fn(1);//给x赋值1
+        // let b=a(5);//给y赋值
+        // console.log(b);
+    </script>
+</body>
+
+</html>

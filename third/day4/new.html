@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    new    一元运算符 专门来运算函数的，能够让函数不调用（不加括号）的情况下执行函数
+
+
+    fn()中的括号是为了传参
+    构造函数中的this就是这个构造函数的实例（具体的事务）=》变量{}
+
+    默认的this是实例;     return返回值是简单数据类型就是Fn()（实例）   如果是引用数据类型的就返回引用数据类型
+
+    */
+   function Fn(t){
+       alert(t);
+    //    console.log(this);//*****Fn{}*****
+    //    return null;//简单数据类型  ->  Fn{}
+        return  [1,2,3]//引用数据类型 ->  [1,2,3]
+   }
+   let f= new Fn('你好世界')
+   console.log(f);//new 可以让函数调用  简单数据复杂数据类型
+   console.log(Fn)//Fn的函数
+    
+    </script>
+</body>
+</html>

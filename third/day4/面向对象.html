@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    面向对象：object oriented，oo
+    是一种对现实世界理解和抽象的方法，是计算机变成激素发展到一定阶段后的产物。
+
+    现实理解(本质一样，角度不同，所以描述的过程不同)   抽象方法(归类)抽出像的部分
+    归类：  归纳多种相同的特征
+
+
+
+    面向对象是一种编程思想，就是把相同的部分代码抽离出来归为一类，把描述这个类的共有特征（方法或者属性）或者属性挂在类的原型下的一种编程思想（方式、模式）
+    
+    new Array
+    new Date
+    new String
+
+    潜规则类的首字母大写  比较常用的形式
+    */   
+   /***
+    
+    //person这个函数类(构造函数)
+    function Person(name,age,job){//抽象
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.say=function(){
+            alert('我叫'+this.name);//.前面的有多少名字就有多少域空间==>地址
+        }
+    }
+    let obj = new Person('易烊千玺',20,'歌手')
+    let obj2= new Person('王凯',38,'演员')
+    obj.say();//调用函数
+    obj2.say();
+    console.log(obj);
+    console.log(obj2);
+    console.log(obj == obj2);//false  地址之比
+    console.log(obj.say);//函数
+    console.log(obj.say());//没有返回值
+    console.log(obj.say == obj2.say);//false
+
+*****/
+//数组的类型
+let ary=[];
+let ary2=[];
+ary.push(1);
+ary.push(2);
+console.log(ary.push);
+console.log(ary == ary2);//false
+console.log(ary.push == ary2.push)//ture  自带函数   方法相同
+
+
+
+    </script>
+</body>
+</html>
