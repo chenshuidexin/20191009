@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+       内置类：浏览器自带一些类  这些类都是函数
+       Array
+       Object
+       String
+       Boolean
+       Number
+       Symbol
+       Function
+
+
+       包装对象：在简单类型（null和undefined排除在外）使用属性或者方法的时候，浏览器会偷偷的创建一个内置类的实例，把使用的属性或方法返回出去之后，这个对象被销毁，内置类的实例就叫包装对象    
+       *//*
+    let arr = [];
+    arr.num = 10;
+    console.log(arr.num);//10  引用类型
+
+    */
+    let str = '你好北京';
+    str.num = 20;
+    let str2 = new String('nihao');
+    console.log(str.substring);//substring() 方法用于提取字符串中介于两个指定下标之间的字符
+    console.log(typeof str2);//object  引用类型
+    console.log(str2.length);//5
+    console.log(str2);//String {"nihao"}
+
+    </script>
+</body>
+</html>

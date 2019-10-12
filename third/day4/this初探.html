@@ -58,17 +58,26 @@ function fn(){
     console.log(this);//#document  点击会出现
 }*/
 //箭头函数的应用   在作用域上下里面
-document.onclick = function(){
-    let fn = ()=>{
-        console.log(this);//#document  局部作用域
-    }
-    fn();
-}
+// document.onclick = function(){
+//     let fn = ()=>{
+//         console.log(this);//#document  局部作用域
+//     }
+//     fn();
+// }
 // document.onclick=()=>{
 //     console.log(this);//window  全局作用域
 // }
 
 
+
+
+
+document.onclick=function(){
+    function f(){
+        console.log(this);//单纯函数调用，window
+    }
+    f();
+}
 
    </script> 
 </body>
